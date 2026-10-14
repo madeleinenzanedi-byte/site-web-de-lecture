@@ -1,0 +1,462 @@
+:root {
+    --primary-color: #6b21a8;     /* Violet foncé / Prune élégant */
+    --primary-hover: #581c87;
+    --accent-color: #881337;     /* Bordeaux chaleureux */
+    --bg-color: #fdf8f6;         /* Fond crème très léger */
+    --card-bg: #ffffff;
+    --text-main: #292524;        /* Marron très foncé / Noir doux */
+    --text-muted: #78716c;       /* Marron grisâtre */
+    --border-color: #e7e5e4;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Conteneur principal en forme de carte bien propre */
+.auth-container {
+    background-color: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.auth-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.auth-header p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Bouton social (Google) */
+.btn-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-social:hover {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+/* Séparateur "Ou..." */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 24px 0;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.separator span {
+    padding: 0 12px;
+}
+
+/* Champs de formulaire */
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-main);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 51, 102, 0.12);
+}
+
+/* Bouton principal */
+.btn-primary {
+    width: 100%;
+    padding: 13px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    margin-top: 8px;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Messages */
+.error-msg {
+    color: #dc2626;
+    background-color: #fee2e2;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.success {
+    color: #059669;
+    background-color: #d1fae5;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.auth-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+.home-body {
+    background-color: #ffffff;
+    margin: 0;
+    padding-bottom: 90px; /* Espace pour la barre de navigation fixe en bas */
+}
+
+/* En-tête du site (Header) */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #f3f4f6;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ff3366;
+    text-decoration: none;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #4b5563;
+}
+
+.profile-icon {
+    background-color: #ff3366;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Section Héro (Première vue) */
+.hero-section {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+}
+
+.hero-subtitle {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #d97706;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero-section h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.cards-cascade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    position: relative;
+    height: 220px;
+    max-width: 350px;
+}
+
+.cascade-card {
+    width: 120px;
+    height: 170px;
+    background: #e5e7eb;
+    border-radius: 14px; /* Coins bien arrondis */
+    position: absolute;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Ombre douce et profonde */
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #ffffff; /* Petite bordure blanche style polaroid/carte */
+}
+
+/* Carte de gauche (légèrement penchée vers la gauche) */
+.cascade-card:nth-child(1) {
+    transform: rotate(-12deg) translateX(-65px) translateY(5px);
+    z-index: 1;
+}
+
+/* Carte du milieu (bien droite ou très légèrement inclinée, au premier plan) */
+.cascade-card:nth-child(2) {
+    transform: rotate(3deg) translateY(-8px);
+    z-index: 3;
+}
+
+/* Carte de droite (légèrement penchée vers la droite) */
+.cascade-card:nth-child(3) {
+    transform: rotate(14deg) translateX(65px) translateY(5px);
+    z-index: 2;
+}
+
+/* Boutons d'action principaux */
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn-main-red {
+    background-color: #ff3366;
+    color: white;
+    padding: 14px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(255, 51, 102, 0.3);
+    transition: background 0.2s;
+}
+
+.btn-main-red:hover {
+    background-color: #e62e5c;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #1f2937;
+    border: 1px solid #d1d5db;
+    padding: 14px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Section Histoires en vedette */
+.featured-section {
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #d97706;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 800;
+    text-align: center;
+    color: #1f2937;
+    margin-top: 5px;
+}
+
+.section-desc {
+    font-size: 14px;
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    background: #ffffff;
+    border: 1px solid #f3f4f6;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.book-cover {
+    height: 250px;
+    background-color: #e5e7eb;
+    background-size: cover;
+    background-position: center;
+}
+
+.book-info {
+    padding: 15px;
+}
+
+.book-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ff3366;
+    margin-bottom: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.book-meta {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.book-stats {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: #4b5563;
+    margin-bottom: 12px;
+}
+
+.tag-badge {
+    display: inline-block;
+    background-color: #eff6ff;
+    color: #3b82f6;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+/* Barre de navigation fixe en bas */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.03);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #9ca3af;
+    font-size: 11px;
+    gap: 4px;
+}
+
+.nav-item.active {
+    color: #ff3366;
+    font-weight: 600;
+}
+
+.nav-item span.icon {
+    font-size: 20px;
+}
